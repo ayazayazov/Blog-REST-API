@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Blog</h1>
+    </header>
+    <main>
+
+        <div class="form">
+            <div class="optionsBtns">
+                <p>Select operation:</p>
+                <div>
+                    <button id="shareOption">Share</button>
+                    <button id="editOption">Edit</button>
+                    <button id="deleteOption">Delete</button>
+                </div>
+            </div>
+            <div class="optionsForm">
+                <div class="shareForm">
+                    <div class="inputs">
+                        <input id="postTitle" type="text" placeholder="title">
+                        <input id="postBody" type="text" placeholder="body">
+                    </div>
+                    <button id="shareBtn">Share</button>
+                </div>
+                <div class="editForm">
+                    <div class="inputs">
+                        <input id="editTitle" type="text" placeholder="title">
+                        <input id="editBody" type="text" placeholder="body">
+                    </div>
+                    <div class="idBtn">
+                        <input id="editID" type="text" placeholder="post index">
+                        <button id="editBtn">Edit</button>
+                    </div>
+                </div>
+                <div class="deleteForm">
+                    <div class="idBtn">
+                        <input id="deleteID" type="text" placeholder="post index">
+                        <button id="deleteBtn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posts" id="posts">
+            <!-- <div class="post">
+                <h4>Post index</h4>
+                <h2>Title</h2>
+                <h3>Body</h3>
+            </div> -->
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
