@@ -23,6 +23,8 @@ const deleteForm = document.querySelector('.deleteForm')
 
 let data = [];
 
+// https://loremflickr.com/640/480/${index}
+
 shareOption.addEventListener('click', ()=>{
     shareForm.style.display = 'flex'
     editForm.style.display = 'none'
@@ -123,12 +125,20 @@ async function deletePost(id){
 // deletePost(101)
 
 function renderElements(data){
-    posts.innerHTML = data.map((post) =>`
+    posts.innerHTML = data.map((post, index) =>`
     <div class="post">
-                <h4>Post index: ${post.id}</h4>
-                <h2>${post.title}</h2>
-                <h3>${post.body}</h3>
+                <img src="https://loremflickr.com/640/480/${index}" alt="">
+                <div class="postText">
+                    <div class="title-body">
+                        <h2>${post.title}</h2>
+                        <h3>${post.body}</h3>
+                    </div>
+                    <div>
+                        <h4>Post index: ${post.id}</h4>
+                    </div>
+                </div>
             </div>
+        </div>
     `).join('');
 }
 
